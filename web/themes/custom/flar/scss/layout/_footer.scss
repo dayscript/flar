@@ -1,0 +1,68 @@
+.container-footer{
+    background: $primary-color;
+    color: $white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 0.9rem;
+    a{
+        color: $white;
+        transition: ease all 0.4s;
+        &:hover{
+            color: $secondary-color;
+            transition: ease all 0.4s;
+        }
+    }
+    h2 {
+        text-transform: uppercase;
+        letter-spacing: 0;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        @media (max-width: 600px){
+            margin-bottom: 0rem;
+        }
+    }
+    nav#block-flar-footer{
+        li{
+            display: block;
+            width: 100%;
+            a{
+                padding: 0.4rem 0;
+                transition: ease all 0.4s;
+                &:hover{
+                    color: $white;
+                    transition: ease all 0.4s;
+                }
+            }
+        }
+    }
+    section#block-flarlogoazul {
+        @media (max-width: 600px){
+            text-align: center;
+        }
+        img{
+            width: 30%;
+            @media (max-width: 600px){
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    @media (max-width: 600px){
+        text-align: center;
+    }
+    section#block-contacto {
+        @media (max-width: 600px){
+            margin-bottom: 2rem;
+        }
+    }
+}
+.bottom-bar{
+    background: $primary-color;
+    color: $white;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+}
+
+.l-relacionado {
+    background: $light-gray;
+}

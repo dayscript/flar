@@ -1,0 +1,332 @@
+.l-full{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background: $light-gray;
+}
+section#block-views-block-alianzas-block-1{
+    position: relative;
+    header {
+        width: 33%;
+        display: inline-block;
+        float: left;
+        padding-right: 0.9rem;
+    }
+    @media (max-width: 600px){
+        text-align: center;
+        header {
+            width: 100%;
+            display: inline-block;
+            float: none;
+            padding-right: initial;
+        }
+        .views-row {
+            margin: 1rem auto;
+        }
+    }
+}
+
+//Blog home
+
+section#block-bloghome {
+    h2.block-title {
+        text-align: center;
+    }
+    section#block-views-block-frontpage-block-1-2{
+        .views-row {
+            min-height: 370px;
+            @media (max-width: 600px){
+                min-height: auto;
+                margin-bottom: 1.2rem;
+                padding-left: 0;
+    padding-right: 0;
+            }
+        }
+    }
+    .container-news-img {
+        position: relative;
+        margin-bottom: 1rem;
+        .tipo{
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            color: $white;
+                background: $secondary-color;
+                padding: 0.3rem;
+                text-transform: uppercase;
+                transition: ease all 0.4s;
+                font-size: 0.8rem; 
+            a{
+                color: $white;
+                background: $secondary-color;
+                padding: 0.3rem;
+                text-transform: uppercase;
+                transition: ease all 0.4s;
+                font-size: 0.8rem;
+                &:hover{
+                    color: $white;
+                    background: $primary-color;
+                    padding: 0.3rem;
+                    text-transform: uppercase;
+                    transition: ease all 0.4s;
+                }
+            }
+        }
+    }
+    section#block-views-block-blog-destaacado-block-1{
+        @media (max-width: 600px){
+            margin-bottom: 1rem;
+        }
+    }
+}  
+.container-news-img {
+    position: relative;
+    margin-bottom: 1rem;
+    .tipo{
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        color: $white;
+            background: $secondary-color;
+            padding: 0.3rem;
+            text-transform: uppercase;
+            transition: ease all 0.4s;
+            font-size: 0.8rem;
+        a{
+            color: $white;
+            background: $secondary-color;
+            padding: 0.3rem;
+            text-transform: uppercase;
+            transition: ease all 0.4s;
+            font-size: 0.8rem;
+            &:hover{
+                color: $white;
+                background: $primary-color;
+                padding: 0.3rem;
+                text-transform: uppercase;
+                transition: ease all 0.4s;
+            }
+        }
+    }
+}
+.tipo{
+    a{
+        color: $white;
+        background: $secondary-color;
+        padding: 0.3rem;
+        text-transform: uppercase;
+        transition: ease all 0.4s;
+        font-size: 0.8rem;
+        color: $white;
+            background: $primary-color;
+            padding: 0.3rem;
+            text-transform: uppercase;
+            transition: ease all 0.4s;
+        &:hover{
+            color: $white;
+            background: $primary-color;
+            padding: 0.3rem;
+            text-transform: uppercase;
+            transition: ease all 0.4s;
+        }
+    }
+}
+.submenu{
+    margin-bottom: 1rem;
+    ul{
+        li{
+            display: block;
+            width: 100%;
+            a{
+                color: $black;
+                padding: 1.2rem 1rem !important;
+                background: $light-gray;
+                margin-bottom: 1px; 
+                border-left: 0px solid $secondary-color;
+                transition: ease all 0.4s;
+                &:hover{
+                    color: $white;
+                    padding: 1.2rem 1rem !important;
+                    background: $primary-color;
+                    margin-bottom: 1px; 
+                    transition: ease all 0.4s;
+                }
+            }
+            a.is-active {
+                border-left: 6px solid $secondary-color;
+                transition: ease all 0.4s;
+            }
+        }
+    }
+}
+
+section#block-flar-content{
+    margin-bottom: 2rem;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+    h2 {
+        text-transform: none;
+        font-size: 1.8rem;
+        color: $primary-color;
+    }
+    ul {
+        list-style: none; /* Remove default bullets */
+      }
+      
+      ul li::before {
+        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: $primary-color; /* Change the color */
+        font-weight: bold; /* If you want it to be bold */
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 1em; /* Also needed for space (tweak if needed) */
+        margin-left: -1em; /* Also needed for space (tweak if needed) */
+      }
+}
+blockquote, blockquote p {
+    line-height: 1.6;
+    color: $black;
+}
+
+blockquote {
+
+    border-left: 3px solid $secondary-color;
+}
+
+section#block-quicktabsdetallepais{
+    ul.quicktabs-tabs {
+        margin-top: 0;
+        margin-left: 0;
+        li {
+            display: inline-block;
+            background: $light-gray;
+            list-style-type: none;
+            padding: 0.4rem 1rem;
+            white-space: nowrap;
+            width: 33.3% !important;
+            transition: ease all 0.4s;
+            text-align: center;
+            a{
+                color: $black;
+                text-transform: uppercase;
+                font-size: 0.8rem; 
+                &:hover{
+                    color: $white;
+                }
+            }
+            &:hover{
+                 background: $primary-color;
+                 transition: ease all 0.4s; 
+            }
+            &.active{
+                background: $secondary-color;
+                a{
+                    color: $white;
+                }
+            }
+        }
+    }
+    .quicktabs-main{
+        margin-bottom: 2rem;
+        span.views-field {
+            display: block;
+            margin-bottom: 0.5rem;
+            .views-label{
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+section#block-quicktabsdetallepaismb{
+    margin-bottom: 1rem;
+    h3{
+        letter-spacing: 0;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+    }
+    .ui-state-active{
+        border: 1px solid $secondary-color/*{borderColorActive}*/;
+        background: $secondary-color/*{bgColorActive}*/ /*{bgImgUrlActive}*/ /*{bgActiveXPos}*/ /*{bgActiveYPos}*/ /*{bgActiveRepeat}*/;
+        font-weight: normal/*{fwDefault}*/;
+        color: #ffffff/*{fcActive}*/;
+    }
+    span.views-field {
+        display: block;
+        margin-bottom: 0.5rem;
+        .views-label{
+            color: $primary-color;
+        }
+    }
+    .ui-accordion .ui-accordion-content {
+        padding: 1em;
+    }
+}
+
+form#views-exposed-form-blog-page-2 {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+    margin-bottom: 2rem;
+    .js-form-item{
+        display: inline-block;
+        @media (max-width: 600px){
+            display: block;
+        }
+    }
+    label {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    select{
+        width: 300px;
+        @media (max-width: 600px){
+            width: 100%; 
+        }
+    }
+    div#edit-actions {
+        display: inline-block;
+    }
+    .button {
+        margin: 0;
+        margin-bottom: 7px;
+    }
+}
+.nota {
+    margin-bottom: 1rem;
+}
+
+
+.node--type-article{
+    .medium-9 {
+        width: 100%;
+    }
+    .medium-push-3 {
+        position: relative;
+        left: 0;
+    }
+    section#block-flar-content {
+        padding-left: 8rem;
+        padding-right: 8rem; 
+        @media (max-width: 600px){
+            padding-left: 0.8rem;
+        padding-right: 0.8rem; 
+        }
+    }
+    .field-node--node-post-date {
+        display: inline-block;
+    }
+    .field-node--field-tipo-de-articulo {
+        display: inline-block;
+        margin-right: 1rem;
+        color: $dark-gray;
+        margin-bottom: 0.6rem;
+    }
+    .field.field-node--body {
+        margin-top: 1rem;
+    }
+}
+
+section#block-socialmedialinks-2{
+    ul.social-media-links--platforms.platforms.inline.horizontal{
+        margin-left: 0;
+    }
+}

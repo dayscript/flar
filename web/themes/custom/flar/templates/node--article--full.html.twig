@@ -1,0 +1,28 @@
+<article id="node-{{ node.id }}" {{ attributes.addClass('node article full type-' ~ node.field_tipo_de_articulo.0.target_id) }}>
+  {% if content.field_tipo_de_articulo %}
+      {{ content.field_tipo_de_articulo }}
+  {% endif %}
+
+  {{ title_prefix }}
+  {% if not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+      <div class="date_submitted">{{ node.getCreatedTime() | format_date('date_article') }}</div>
+  {% endif %}
+
+  {% if node.field_youtube_video.0.input is not empty %}
+    {{ content.field_youtube_video }}
+  {% elseif node.hasField('field_image') %}
+     {{ content.field_image }}
+  {% endif %}
+
+  <div {{ content_attributes }}>
+    {{ content|without('field_tipo_de_articulo', 'field_youtube_video', 'field_image') }}
+  </div>
+
+</article>

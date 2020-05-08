@@ -1,0 +1,160 @@
+// Elements
+//
+// Things to review before you write code here:
+// - Be sure to load after "foundation" import.
+// - Also, before adding styles be sure to modify variables in the
+//   "base/_common.scss" file. You may not need to write any code.
+
+// Headings
+//------------------------------------------
+h1, h2 {
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 2rem;
+}
+h3, h4, h5, h6 {
+ letter-spacing: -1px;
+}
+// h1, h2, h3,
+// h4, h5, h6 {}
+
+// Anchors
+//-----------------------------------------------------------------------------
+// a {}
+
+// a:focus {}
+
+// a.active,
+// a:active,
+// a:hover {}
+
+// Form Input
+//-----------------------------------------------------------------------------
+// input[type="text"],
+// input[type="password"],
+// input[type="date"],
+// input[type="datetime"],
+// input[type="datetime-local"],
+// input[type="month"],
+// input[type="week"],
+// input[type="email"],
+// input[type="number"],
+// input[type="search"],
+// input[type="tel"],
+// input[type="time"],
+// input[type="url"],
+// textarea {
+// }
+
+// input[type="text"],
+// input[type="password"],
+// input[type="date"],
+// input[type="datetime"],
+// input[type="datetime-local"],
+// input[type="month"],
+// input[type="week"],
+// input[type="email"],
+// input[type="number"],
+// input[type="search"],
+// input[type="tel"],
+// input[type="time"],
+// input[type="url"],
+// textarea {
+
+// }
+
+// select {}
+
+//SLIDER
+    .owl-wrapper-outer{
+        z-index: 1;
+        position: relative;
+    }
+    .owl-controls {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%); 
+        margin-top: 0;
+        text-align: justify;
+        display: inline-block;
+        width: 100%;
+        z-index: 2;
+        .owl-next {
+            float: right;
+            text-indent: -10000px;
+            position: relative;
+            &:after{
+                position: absolute;
+                background-image: url(../images/right.svg);
+                right: 1rem;
+                top: 0;
+                content: "";
+                width: 40px;
+                height: 40px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+        }
+        .owl-prev {
+            float: left;
+            text-indent: -10000px;
+            position: relative;
+            &:after{
+                position: absolute;
+                background-image: url(../images/left.svg);
+                left: 1rem;
+                top: 0;
+                content: "";
+                width: 40px;
+                height: 40px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+        }
+    }
+    .owl-theme .owl-controls .owl-buttons div {
+        padding: 0;
+        background: none;
+    }
+
+
+.mb-4{
+    margin-bottom: 4rem;
+    @media (max-width: 600px) {
+        margin-bottom: 2rem;
+    } 
+}
+.mb-2{
+    margin-bottom: 2rem;
+    @media (max-width: 600px) {
+        margin-bottom: 1rem;
+    } 
+}
+.block-full{
+    display: inline-block;
+    width: 100%;
+}
+.p-block{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    @media (max-width: 600px) {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+.breadcrumbs {
+    margin: 0;
+    a{
+        font-size: 0.6rem;
+    }
+}
+
+img.img-content {
+    float: right;
+    border: 1px solid $light-gray;
+    margin: 2rem 0 2rem 2rem;
+}

@@ -1,0 +1,164 @@
+<div class="off-canvas-wrapper">
+  <div class="inner-wrap off-canvas-wrapper-inner" id="inner-wrap" data-off-canvas-wrapper>
+    <aside id="left-off-canvas-menu" class="off-canvas left-off-canvas-menu position-left" role="complementary" data-off-canvas>
+      {{ page.left_off_canvas }}
+    </aside>
+
+    <aside id="right-off-canvas-menu" class="off-canvas right-off-canvas-menu position-right" role="complementary" data-off-canvas>
+      {{ page.right_off_canvas }}
+    </aside>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+      {% if page.meta_header %}
+        <div class="row">
+          <div class="container-head columns">
+            {{ page.meta_header }}
+          </div>
+        </div>
+      {% endif %}
+      
+      <header class="" role="banner" aria-label="{{ 'Site header'|t }}">
+        {% if linked_site_name or linked_logo %}
+          <div class="large-2 columns">
+            {% if linked_logo %}
+              {{ linked_logo }}
+            {% endif %}
+          </div>
+          <div class="left large-4 columns">
+            {% if is_front %}
+              <h1 id="site-name">{{ linked_site_name }}</h1>
+            {% else %}
+              <div id="site-name">{{ linked_site_name }}</div>
+            {% endif %} 
+          </div>
+        {% endif %}
+        {% if page.header %}
+          <div class="container-header">
+            {{ page.header }}
+          </div>
+        {% endif %}
+      </header>
+
+      <div class="row">
+        {% if show_account_info %}
+          <div class="{{ site_slogan ? 'large-6' : 'large-4 columns large-offset-8' }} columns hide-for-small">
+            <p>
+              {% if logged_in %}
+                <a href="{{ path('user.page') }}">{{ 'My Account'|t }}</a>
+                <a href="{{ path('user.logout') }}">{{ 'Logout'|t }}</a>
+              {% else %}
+                <a href="{{ path('user.login') }}">{{ 'Login'|t }}</a>
+                <a href="{{ path('user.register') }}">{{ 'Sign Up'|t }}</a>
+              {% endif %}
+            </p>
+          </div>
+        {% endif %}
+        {% if site_slogan %}
+          <div class="large-6 columns hide-for-small">
+            {{ site_slogan }}
+          </div>
+        {% endif %}
+        {% if show_account_info %}
+          <div class="show-for-small">
+            <div class="six mobile-two columns">
+              <p>
+                <a href="{{ path('user.login') }}" class="radius button">{{ 'Login'|t }}</a>
+              </p>
+            </div>
+            <div class="six mobile-two columns">
+              <p>
+                <a href="{{ path('user.register') }}" class="radius success button">{{ 'Sign Up'|t }}</a>
+              </p>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+
+      {% if messages and not zurb_foundation_messages_modal %}
+        <div class="l-messages row">
+          <div class="large-12 columns">
+            {{ messages }}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if page.help %}
+        <div class="l-help row">
+          <div class="large-12 columns">
+            {{ page.help }}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if page.full %}
+      <div class="l-full">
+        <div class="">
+          {{ page.full }}
+        </div>
+      </div>
+    {% endif %}
+
+      <div class="row">
+        <main id="main" class="{{ main_grid }} columns" role="main">
+          {% if page.highlighted %}
+            {% spaceless %}
+              {{ page.highlighted }}
+            {% endspaceless %}
+          {% endif %}
+          <a id="main-content"></a>
+          {% if breadcrumb %} {{ breadcrumb }} {% endif %}
+          <section>
+            {{ page.content }}
+          </section>
+        </main>
+        {% if page.sidebar_first %}
+          <div id="sidebar-first" class="{{ sidebar_first_grid }} columns sidebar ">
+            {{ page.sidebar_first }}
+          </div>
+        {% endif %}
+        {% if page.sidebar_second %}
+          <div id="sidebar-second" class="{{ sidebar_sec_grid }} columns sidebar">
+            {{ page.sidebar_second }}
+          </div>
+        {% endif %}
+      </div>
+      {% if page.footer_first or page.footer_middle or page.footer_last %}
+
+      {% if page.relacionado %}
+      <div class="l-relacionado">
+        <div class="">
+          {{ page.relacionado }}
+        </div>
+      </div>
+    {% endif %}
+
+<div class="container-footer">
+  <footer class="row">
+    {% if page.footer_first %}
+      <div id="footer-first" class="large-4 columns">
+        {{ page.footer_first }}
+      </div>
+    {% endif %}
+    {% if page.footer_middle %}
+      <div id="footer-middle" class="large-4 columns">
+        {{ page.footer_middle }}
+      </div>
+    {% endif %}
+    {% if page.footer_last %}
+      <div id="footer-last" class="large-4 columns">
+        {{ page.footer_last }}
+      </div>
+    {% endif %}
+  </footer>
+</div>
+      {% endif %}
+      <div class="bottom-bar">
+        <div class="row">
+          <div class="large-12 columns text-center">
+          &copy; Copyright 2012- {{ "now"|date('Y') }} FLAR Todos los derechos reservados.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
