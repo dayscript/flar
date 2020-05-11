@@ -1,0 +1,16 @@
+powerbi.settings:
+  path: 'admin/config/services/powerbi/settings'
+  defaults:
+    _form: '\Drupal\powerbi\Form\PowerbiSettingsForm'
+    _title: 'Powerbi Settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+powerbi.dashboard:
+  path: 'pbi/embed/{component}'
+  defaults:
+    _controller: '\Drupal\powerbi\Controller\PowerbiController::embedComponent'
+    _title_callback: '\Drupal\powerbi\Controller\PowerbiController::getTitle'
+    _title: 'Powerbi dashboard'
+  requirements:
+    _permission: 'access content'

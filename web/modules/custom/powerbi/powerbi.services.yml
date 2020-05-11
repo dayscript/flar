@@ -1,0 +1,5 @@
+# Service definition in YAML.
+services:
+  powerbi.client:
+    class: '\Drupal\powerbi\Client\PowerbiClient'
+    arguments: ['@http_client', '@logger.factory']

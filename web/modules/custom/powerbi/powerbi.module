@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * @file
+ * Contains powerbi.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_link_alter().
+ */
+function powerbi_link_alter(&$variables) {
+    if ($variables['text'] == 'SIE') {
+      $url = $variables['url'];
+      if(isset($url) && !empty($url)){
+        $variables['options']['attributes']['target'] = '_blank';
+      }
+    }
+}
+
+/**
+ * Implements hook_help().
+ */
+function powerbi_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the powerbi module.
+    case 'help.page.powerbi':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module supports Microsoft Power BI Embedded service, including dashboards, reports, report visuals, Q&amp;A, and tiles.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function powerbi_theme($existing, $type, $theme, $path) {
+
+  return [
+    'get-pbi-data' => [
+      'variables' => [
+        'data' => NULL,
+      ],
+    ],
+  ];
+}

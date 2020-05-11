@@ -36,6 +36,7 @@ function flar_preprocess_node(&$variables) {
  * Add convenience variables and template suggestions
  */
 function flar_preprocess_page(&$variables) {
+    
 }
 
 /**

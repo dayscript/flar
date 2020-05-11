@@ -1,0 +1,20 @@
+powerbi:
+  version: version
+  css:
+    theme:
+      css/powerbi.local.css: {}
+  js:
+    js/powerbi.local.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+    - core/jquery.once
+powerbi-client:
+  remote: https://cdn.jsdelivr.net/npm/powerbi-client@2.7.1/dist/powerbi.min.js
+  version: 2.7.1
+  license:
+    name: MIT
+    url: https://cdn.jsdelivr.net/npm/powerbi-client@2.7.1/LICENSE
+    gpl-compatible: true
+  js:
+    https://cdn.jsdelivr.net/npm/powerbi-client@2.7.1/dist/powerbi.min.js: { type: external, minified: true }

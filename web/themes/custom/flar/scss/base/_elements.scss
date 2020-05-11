@@ -158,3 +158,33 @@ img.img-content {
     border: 1px solid $light-gray;
     margin: 2rem 0 2rem 2rem;
 }
+
+.mm-panels{
+    background: $primary-color;
+    li {
+        display: block;
+        width: 100%;
+        a{
+            text-transform: uppercase;
+            padding: 1.4rem 1rem !important; 
+        }
+    }
+}
+.responsive-menu-toggle-icon{
+    &:after{
+        background: $primary-color;
+    }
+    &:before{
+        background: $primary-color;
+    }
+}
+.responsive-menu-toggle-icon span.icon {
+    background: $primary-color;
+}
+.responsive-menu-toggle-icon span.label {
+    display: none;
+}
+.responsive-menu-toggle {
+    display: inline-block;
+    float: right;
+}

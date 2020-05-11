@@ -99,6 +99,11 @@
     {% endif %}
 
       <div class="row">
+        {% if page.sidebar_first %}
+        <div id="sidebar-first" class="{{ sidebar_first_grid }} columns sidebar ">
+          {{ page.sidebar_first }}
+        </div>
+      {% endif %}
         <main id="main" class="{{ main_grid }} columns" role="main">
           {% if page.highlighted %}
             {% spaceless %}
@@ -111,11 +116,7 @@
             {{ page.content }}
           </section>
         </main>
-        {% if page.sidebar_first %}
-          <div id="sidebar-first" class="{{ sidebar_first_grid }} columns sidebar ">
-            {{ page.sidebar_first }}
-          </div>
-        {% endif %}
+
         {% if page.sidebar_second %}
           <div id="sidebar-second" class="{{ sidebar_sec_grid }} columns sidebar">
             {{ page.sidebar_second }}
