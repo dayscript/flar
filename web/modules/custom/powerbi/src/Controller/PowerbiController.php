@@ -125,7 +125,7 @@ class PowerbiController extends ControllerBase {
    */
   public function embedComponent($component) {
 
-    $token = isset($_COOKIE["access_token"]) ? $_COOKIE["access_token"] : $this->getAuthToken();
+    $token = $this->getAuthToken();//isset($_COOKIE["access_token"]) ? $_COOKIE["access_token"] 
     $endpoint = 'https://api.powerbi.com/v1.0/myorg/groups/' . $this->groupId . '/reports/' . $this->reportId;
 
     $request = $this->powerbiApiClient->connect('get', $endpoint, $token, []);
@@ -143,7 +143,7 @@ class PowerbiController extends ControllerBase {
     ];
     return [
       '#theme' => 'get-pbi-data',
-      '#data' => $results,
+      '#data' => $data,
       // Attached library.
       '#attached' => [
         'library' => [

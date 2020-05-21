@@ -19,7 +19,7 @@
                 navContentPaneEnabled: true
             }
         };
-        console.log(config);
+        
         var $reportContainer = $('#emdedReportPowerBI');
         var embedContainer = $reportContainer.get(0);
         var report = powerbi.embed(embedContainer, config);
