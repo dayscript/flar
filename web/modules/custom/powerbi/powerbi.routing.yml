@@ -13,4 +13,4 @@ powerbi.dashboard:
     _title_callback: '\Drupal\powerbi\Controller\PowerbiController::getTitle'
     _title: 'Powerbi dashboard'
   requirements:
-    _permission: 'access content'
+    _access: 'TRUE'

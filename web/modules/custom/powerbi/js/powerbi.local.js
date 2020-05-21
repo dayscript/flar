@@ -1,4 +1,7 @@
-(function($) {
+(function ($, Drupal, drupalSettings) {
+
+  'use strict';
+
   Drupal.behaviors.powerBI = {
     attach: function(context, settings) {
       if(settings.powerBI) {
@@ -48,5 +51,6 @@
       }
     }
   };
-}(jQuery));
+
+})(jQuery, Drupal, drupalSettings);
 

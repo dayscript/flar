@@ -6,8 +6,9 @@ powerbi:
   js:
     js/powerbi.local.js: {}
   dependencies:
-    - core/jquery
+    - core/drupal
     - core/drupalSettings
+    - core/jquery
     - core/jquery.once
 powerbi-client:
   remote: https://cdn.jsdelivr.net/npm/powerbi-client@2.7.1/dist/powerbi.min.js
