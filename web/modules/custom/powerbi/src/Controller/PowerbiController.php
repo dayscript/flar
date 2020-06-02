@@ -176,9 +176,9 @@ class PowerbiController extends ControllerBase {
    */
   public function getAuthToken() {
 
-    if (isset($_COOKIE["access_token"])) {
+    /*if (isset($_COOKIE["access_token"])) {
       return $_COOKIE["access_token"];
-    }
+    }*/
 
     $body = [
       'grant_type' => 'password',
@@ -192,7 +192,7 @@ class PowerbiController extends ControllerBase {
     $request = $this->powerbiApiClient->connect('post', $endpoint, NULL, $body);
     $results = json_decode($request, TRUE);
     if (!empty($results)) {
-      setcookie("access_token", $results['access_token'], $results['expires_on']);
+      //setcookie("access_token", $results['access_token'], $results['expires_on']);
       return $results['access_token'];
     }
     return NULL;

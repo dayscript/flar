@@ -1,0 +1,85 @@
+.search-icon {
+	background: url(/themes/custom/flar/images/search.png) center center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 60%;
+	background-color: transparent;
+    color: transparent;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    position: relative;
+    font-size: 2rem;
+    cursor: pointer;
+    text-indent: -9999px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+#block-flar-search {
+    @include breakpoint(medium) {
+        display: none;
+        position: relative;
+	    animation: scale-display .3s;
+	    margin-right: auto;
+	    margin-left: auto;
+	    color: #008bc2;
+	    z-index: 10;
+    }
+	@include breakpoint(small) {
+        display: block;
+        position: absolute;
+		bottom: 18%;
+		padding: 0 20px;
+    }
+	&.active {
+    	display: block;
+    }
+}
+form#search-block-form {
+	@include breakpoint(medium) {
+		box-sizing:border-box;
+		color:rgb(0, 139, 194);
+		display:block;
+		font-family:"Source Sans Pro", sans-serif;
+		font-size:16px;
+		font-weight:400;
+		line-height:24px;
+		margin: 0;
+		padding: 0;
+		position:relative;
+		text-align:right;
+		text-size-adjust:100%;
+		z-index:10;
+		-webkit-font-smoothing:antialiased;
+		input[type="search"], #edit-keys {
+		    border-radius: 0;
+		    border: 0;
+		    border-bottom: 1px solid #008bc2;
+		    box-shadow: none;
+		    background: transparent;
+		    font-size: 1.6rem;
+		    padding-bottom: 18px;
+		}
+		input[type="submit"], #edit-submit{
+			background: url(/themes/custom/flar/images/search.png) center center;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 60%;
+			background-color: transparent;
+			color: transparent;
+			padding: 5px 0;
+			margin: 0px;
+			width: 40px;
+			height: 40px;
+		}
+		.form-actions {
+			position: absolute;
+		    top: 0;
+		    right: 0;
+		}
+    }
+	@include breakpoint(small) {
+		//
+    }
+}
