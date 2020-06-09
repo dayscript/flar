@@ -83,3 +83,33 @@ form#search-block-form {
 		//
     }
 }
+
+/* Archivos */
+.body {
+	a {
+		&.file {
+			background: url(/themes/custom/flar/images/pdf.png) center center;
+		    background-repeat: no-repeat;
+		    background-position: left;
+		    background-size: 50px;
+		    border-bottom: 1px solid #dddddd;
+		    padding: 20px 0 30px 60px;
+		    line-height: 1;
+		    display: block;
+		}
+	}
+}
+.item-archive {
+	span.file {
+		a {
+			background: url(/themes/custom/flar/images/pdf.png) center center;
+		    background-repeat: no-repeat;
+		    background-position: left;
+		    background-size: 50px;
+		    border-bottom: 1px solid #dddddd;
+		    padding: 20px 0 30px 60px;
+		    line-height: 1;
+		    display: block;
+		}
+	}
+}

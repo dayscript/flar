@@ -11,6 +11,9 @@ h1, h2 {
     text-transform: uppercase;
     letter-spacing: -1px;
     margin-bottom: 2rem;
+    strong{
+        font-weight: 300;
+    }
 }
 h3, h4, h5, h6 {
  letter-spacing: -1px;
@@ -187,4 +190,16 @@ img.img-content {
 .responsive-menu-toggle {
     display: inline-block;
     float: right;
+}
+
+section#block-views-block-articulos-relacionados-block{
+    .views-row {
+        position: relative;
+        min-height: 360px;
+        .link {
+            margin-top: 0.6rem;
+            position: absolute;
+            bottom: 0;
+        }
+    }
 }

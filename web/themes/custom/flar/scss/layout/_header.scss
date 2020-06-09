@@ -15,7 +15,7 @@
                     text-transform: uppercase;
                     color: $black;
                     transition: ease all 0.4s;
-                    padding: 0.6rem 1rem 1.5rem 1rem;
+                    padding: 0.6rem 0.7rem 1.5rem 0.7rem;
                     font-size: 0.9rem;
                     border-bottom: 0px solid $secondary-color;
 
@@ -55,7 +55,17 @@
         overflow: hidden;
         padding-top: 1.4rem;
         padding-bottom: 1.4rem;
-        margin-bottom: 4rem;
+        margin-bottom: 4rem; 
+        &:before{
+            position: absolute;
+            width: 100%;
+            height: 70px;
+            background: white;
+            left: 0;
+            bottom: 0;
+            content: "";
+            z-index: 1;
+        }
         @media (max-width: 600px) {
             margin-bottom: 2rem;
         }
@@ -77,10 +87,10 @@
 }
 .container-header{
     background: $light-gray;
-    position: relative;
+    position: relative;         
     overflow: hidden;
-    padding-top: 1.4rem;
-    padding-bottom: 1.4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem; 
     margin-bottom: 4rem;
     @media (max-width: 600px) {
         margin-bottom: 2rem;
@@ -177,10 +187,30 @@
             display: block !important;
         }
     }
+    .views-field-field-image{
+        .field-content{
+            border: 1px solid $light-gray;
+            display: block;
+            background: $white;
+            img{
+                position: relative;
+                &:after{
+                    position: absolute;
+                    background: black;
+                    top: 0;
+                    left: 0;
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1; 
+                } 
+            }
+        }
+    }
 }
 //Noticias
 .title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 600;
     a{
         color: $black; 
@@ -192,8 +222,9 @@
     }
 }
 .title-2 {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     font-weight: 600;
+    line-height: 1.4em;
     a{
         color: $black; 
         transition: ease all 0.4s;
@@ -249,4 +280,33 @@ section#block-flar-page-title {
             letter-spacing: 0;
         }
     }
+}
+
+
+.dropbutton-wrapper {
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+.dropbutton-widget {
+    background: white;
+}
+.dropbutton-arrow {
+color: $primary-color;
+}
+#block-flar-search.active {
+    display: block;
+    margin-top: 2rem;
+}
+
+.path-blog{
+    .foto {
+        border: 1px solid $light-gray;
+    }
+    .nota {
+        margin-bottom: 1rem;
+        min-height: 460px;
+        @media (max-width: 600px){
+            min-height: auto;
+        }
+    } 
 }
