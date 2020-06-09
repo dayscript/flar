@@ -85,7 +85,7 @@ form#search-block-form {
 }
 
 /* Archivos */
-.body {
+.body, #main {
 	a {
 		&.file {
 			background: url(/themes/custom/flar/images/pdf.png) center center;
