@@ -60,7 +60,6 @@ section#block-bloghome {
     }
     section#block-views-block-frontpage-block-1-2{
         .views-row {
-            min-height: 370px;
             @media (max-width: 600px){
                 min-height: auto;
                 margin-bottom: 1.2rem;
@@ -354,5 +353,19 @@ form#views-exposed-form-blog-page-2 {
 section#block-socialmedialinks-2{
     ul.social-media-links--platforms.platforms.inline.horizontal{
         margin-left: 0;
+    }
+}
+
+#block-views-block-frontpage-block-1-2, #block-views-block-frontpage-block-2, #block-views-block-frontpage-block-3, #block-views-block-frontpage-block-4{
+    min-height: 400px !important;
+} 
+
+.block-socialmedialinks{
+    &.columns{
+        padding-right: .4rem;
+        padding-left: .4rem;
+        .fa{
+            font-size: 0.8rem; 
+        }
     }
 }
