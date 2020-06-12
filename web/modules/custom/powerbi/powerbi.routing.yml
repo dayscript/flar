@@ -14,3 +14,5 @@ powerbi.dashboard:
     _title: 'Powerbi dashboard'
   requirements:
     _access: 'TRUE'
+  options:
+    no_cache: 'TRUE'
