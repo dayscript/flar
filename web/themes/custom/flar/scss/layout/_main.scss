@@ -216,7 +216,7 @@ blockquote {
     border-left: 3px solid $secondary-color;
 }
 
-section#block-quicktabsdetallepais{
+section#block-quicktabsdetallepais, section#block-quicktabsdetallepaisen {
     ul.quicktabs-tabs {
         margin-top: 0;
         margin-left: 0;
@@ -261,7 +261,7 @@ section#block-quicktabsdetallepais{
     }
 }
 
-section#block-quicktabsdetallepaismb{
+section#block-quicktabsdetallepaismb, section#block-quicktabsdetallepaismben {
     margin-bottom: 1rem;
     h3{
         letter-spacing: 0;
