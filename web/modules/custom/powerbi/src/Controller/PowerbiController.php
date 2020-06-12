@@ -124,23 +124,24 @@ class PowerbiController extends ControllerBase {
    *   The data to be embedded on the page.
    */
   public function embedComponent($component) {
-
-    $token = $this->getAuthToken();//isset($_COOKIE["access_token"]) ? $_COOKIE["access_token"] 
     $endpoint = 'https://api.powerbi.com/v1.0/myorg/groups/' . $this->groupId . '/reports/' . $this->reportId;
-
-    $request = $this->powerbiApiClient->connect('get', $endpoint, $token, []);
-    $results = json_decode($request, TRUE);
-    $embedUrl = $results['embedUrl'];
-    $embedToken = $this->getEmbedToken($endpoint, $token);
+    $accessToken = $this->getAuthToken();
+    $debugToken = json_decode($accessToken, TRUE);
+    if(isset($debugToken->errorCode) && $debugToken->errorCode == 403){
+      $accessToken = $this->getAuthToken();
+    }
+    $embedUrl = $this->getEmbedUrl($endpoint, $accessToken);
+    $embedToken = $this->getEmbedToken($endpoint, $accessToken);
 
     $data = [
       'powerBI' => TRUE,
       'reportId' => $this->reportId,
       'groupId' => $this->groupId,
-      //'accessToken' => $token,
-      'embedToken' => $embedToken,
-      'embedUrl' => $embedUrl
+      //'accessToken' => $accessToken,
+      'embedUrl' => $embedUrl,
+      'embedToken' => $embedToken
     ];
+
     return [
       '#theme' => 'get-pbi-data',
       '#data' => $data,
@@ -175,11 +176,6 @@ class PowerbiController extends ControllerBase {
    *   Authorization token.
    */
   public function getAuthToken() {
-
-    /*if (isset($_COOKIE["access_token"])) {
-      return $_COOKIE["access_token"];
-    }*/
-
     $body = [
       'grant_type' => 'password',
       'scope' => 'openid',
@@ -192,8 +188,22 @@ class PowerbiController extends ControllerBase {
     $request = $this->powerbiApiClient->connect('post', $endpoint, NULL, $body);
     $results = json_decode($request, TRUE);
     if (!empty($results)) {
-      //setcookie("access_token", $results['access_token'], $results['expires_on']);
       return $results['access_token'];
+    }
+    return NULL;
+  }
+
+  /**
+   * Get embed url.
+   *
+   * @return mixed|null
+   *   Embed url.
+   */
+  public function getEmbedUrl($endpoint, $token) {
+    $request = $this->powerbiApiClient->connect('get', $endpoint, $token, []);
+    $results = json_decode($request, TRUE);
+    if (!empty($results)) {
+      return $results['embedUrl'];
     }
     return NULL;
   }
@@ -207,7 +217,6 @@ class PowerbiController extends ControllerBase {
   public function getEmbedToken($endpoint, $token) {
     $endpoint = $endpoint . "/GenerateToken";
     $curl = curl_init();
-
     curl_setopt_array($curl, array(
       CURLOPT_URL => $endpoint,
       CURLOPT_RETURNTRANSFER => true,
@@ -223,11 +232,9 @@ class PowerbiController extends ControllerBase {
         "Content-Type: application/json",
       ),
     ));
-
     $response = curl_exec($curl);
     $results = json_decode($response, TRUE);
     $embedToken = $results['token'];
-    
     curl_close($curl);
     return $embedToken;
   }
