@@ -113,3 +113,11 @@ form#search-block-form {
 		}
 	}
 }
+
+ul.menu li:nth-child(6) {
+  display:none;
+}
+
+.user-logged-in ul.menu li:nth-child(6) {
+	display:block;
+}
