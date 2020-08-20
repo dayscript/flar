@@ -114,10 +114,17 @@ form#search-block-form {
 	}
 }
 
-ul.menu li:nth-child(6) {
-  display:none;
+/*Ocultar Item menu SIE*/
+#block-flar-main-menu {
+	ul.menu li:nth-child(6) {
+	  display:none;
+	}
 }
 
-.user-logged-in ul.menu li:nth-child(6) {
-	display:block;
+.user-logged-in {
+	#block-flar-main-menu {
+		ul.menu li:nth-child(6) {
+		  display:block;
+		}
+	}
 }
