@@ -117,14 +117,22 @@ form#search-block-form {
 /*Ocultar Item menu SIE*/
 #block-flar-main-menu {
 	ul.menu li:nth-child(6) {
-	  display:none;
+	  display: none;
+	}
+}
+.mm-menu {
+	ul.menu.dropdown.mm-listview li:nth-child(6) {
+	  display: none;
 	}
 }
 
 .user-logged-in {
 	#block-flar-main-menu {
 		ul.menu li:nth-child(6) {
-		  display:block;
+		  display: block;
 		}
+	}
+	ul.menu.dropdown.mm-listview li:nth-child(6) {
+	  display: block;
 	}
 }
