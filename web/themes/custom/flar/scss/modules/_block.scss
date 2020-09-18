@@ -136,3 +136,10 @@ form#search-block-form {
 	  display: block;
 	}
 }
+
+section#block-dropdownlanguage {
+	@media (max-width: 600px){
+		margin-top: -27px;
+	}
+   
+}
