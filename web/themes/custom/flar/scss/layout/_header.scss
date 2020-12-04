@@ -404,6 +404,10 @@ color: $primary-color;
         -moz-border-radius-topright: 20px;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
+        /* Border shadow */
+        -webkit-box-shadow: 0px -3px 12px 3px rgba(167,167,167,1);
+        -moz-box-shadow: 0px -3px 12px 3px rgba(167,167,167,1);
+        box-shadow: 0px -3px 12px 3px rgba(167,167,167,1);
         background-color: #114490; 
         color:white; 
         padding: 10px;
@@ -415,6 +419,10 @@ color: $primary-color;
         -moz-border-radius-bottomleft: 20px;
         border-bottom-right-radius: 20px;
         border-bottom-left-radius: 20px;
+        // border shadow
+        -webkit-box-shadow: 0px 5px 12px 3px rgba(167,167,167,1);
+        -moz-box-shadow: 0px 5px 12px 3px rgba(167,167,167,1);
+        box-shadow: 0px 5px 12px 3px rgba(167,167,167,1);
         background-color: #f0f0f0; 
         padding: 10px; 
         margin-top: -16px;
@@ -430,6 +438,10 @@ color: $primary-color;
         -moz-border-radius-topright: 20px;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
+        /* Border shadow */
+        -webkit-box-shadow: 0px -3px 12px 3px rgba(167,167,167,1);
+        -moz-box-shadow: 0px -3px 12px 3px rgba(167,167,167,1);
+        box-shadow: 0px -3px 12px 3px rgba(167,167,167,1);
         background-color: #114490; 
         color:white; 
         padding: 10px;
@@ -441,6 +453,10 @@ color: $primary-color;
         -moz-border-radius-bottomleft: 20px;
         border-bottom-right-radius: 20px;
         border-bottom-left-radius: 20px;
+        // border shadow
+        -webkit-box-shadow: 0px 5px 12px 3px rgba(167,167,167,1);
+        -moz-box-shadow: 0px 5px 12px 3px rgba(167,167,167,1);
+        box-shadow: 0px 5px 12px 3px rgba(167,167,167,1);
         background-color: #f0f0f0; 
         padding: 10px; 
         margin-top: -16px;
