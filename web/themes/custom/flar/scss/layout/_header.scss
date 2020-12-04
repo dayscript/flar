@@ -462,3 +462,8 @@ color: $primary-color;
         margin-top: -16px;
     }
 }
+@media only screen and (min-device-width: 0px) and (max-device-width: 650px) {
+    #block-navegacionprincipal-2{
+        display: none;
+    }
+}
