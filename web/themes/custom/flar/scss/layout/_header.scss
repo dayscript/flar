@@ -329,8 +329,8 @@ color: $primary-color;
     z-index: 9999999999;
 }
 #block-navegacionprincipal-2 {
-    transform: translateY(50%);
-    z-index: 99999999;
+    // transform: translateY(50%);
+    position: relative;
     background-color: white;
     ul {
         float: right;

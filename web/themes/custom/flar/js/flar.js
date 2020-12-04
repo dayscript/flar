@@ -18,7 +18,7 @@
 			});
 			/* Bloque buscado MegaMenu */
 			$('.we-megamenu-nolink').click(function(e) {
-				$('#block-flar-search').css("z-index","9999999");
+				// $('#block-flar-search').css("z-index","9999999");
 				console.log('le di click');
 				e.preventDefault();
 				$('#block-flar-search').toggleClass('active');
