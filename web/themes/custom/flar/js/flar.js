@@ -41,6 +41,21 @@
 				jQuery('nav ul.breadcrumbs li.current a').remove();
 				jQuery('nav ul.breadcrumbs li.current').remove();
 			}
+			$('#block-flar-main-menu').css("z-index","99999");
+			$(".btn-border-r").css("border-radius", "20px");
+
+			let param_url = "";
+			let location = window.location.pathname;
+			let searchParams = new URLSearchParams(window.location.search)
+			param_url = searchParams.get('url')
+			if(param_url == null){
+				location.href="/investigaciones";
+			}
+			if (location.indexOf('documento') >= 0){
+				$("#iframe_doc").attr('src', param_url)
+			}else{
+				location.href="/investigaciones";
+			}
 		}
 	};
 
