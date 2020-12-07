@@ -29,6 +29,7 @@
         "drupal/ds": "^3.5",
         "drupal/editor_file": "^1.5",
         "drupal/entityqueue": "^1.0",
+        "drupal/feeds": "^3.0@alpha",
         "drupal/field_group": "^3.0",
         "drupal/fontyourface": "^3.2",
         "drupal/google_tag": "^1.4",
