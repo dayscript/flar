@@ -64,6 +64,13 @@
 			}else{
 				location.href="/investigaciones";
 			}
+
+			/* Asiganr titul al h3 */
+
+			// var title = $('#title-doc').val();
+			var title = $('#title-doc').attr('data-info');
+			console.log('obtuve el titulo y es ', title);
+			$("'#h3_title").value(title);
 		}
 	};
 
