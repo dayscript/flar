@@ -10,6 +10,14 @@
 	*/
 	Drupal.behaviors.flar = {
 		attach: function (context, settings) {
+			/* Menu superfish-master */
+			$(document).ready(function(){
+				$('#block-menulateral ul.menu').superfish({
+					animation: {height:'show'},
+					delay:		 1200		
+				});
+			});
+
 			/* Bloque Buscador Header */
 			$('.search-icon').click(function(e) {
 				e.preventDefault();
@@ -72,13 +80,6 @@
 			console.log('obtuve el titulo y es ', title);
 			$("'#h3_title").value(title);
 
-
-			$(document).ready(function(){
-				$('#block-menulateral ul.menu').superfish({
-					animation: {height:'show'},
-					delay:		 1200		
-				});
-			});
 		}
 	};
 
