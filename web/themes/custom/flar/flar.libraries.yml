@@ -6,3 +6,12 @@ global:
   js:
     js/flar.js: {}
 
+superfish-master:
+  version: 1.0
+  css:
+    base:
+      libraries/superfish-master/css/superfish-vertical.css: {} 
+      libraries/superfish-master/css/superfish.css: {} 
+  js:
+    libraries/superfish-master/js/hoverIntent.js: {} 
+    libraries/superfish-master/js/superfish.js: {} 

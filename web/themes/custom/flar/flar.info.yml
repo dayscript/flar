@@ -11,6 +11,7 @@ base theme: zurb_foundation
 # need to add custom CSS or JS
 libraries:
  - flar/global
+ - flar/superfish-master
 
 # Regions are output in the page.html.twig
 

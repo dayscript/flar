@@ -71,6 +71,14 @@
 			var title = $('#title-doc').attr('data-info');
 			console.log('obtuve el titulo y es ', title);
 			$("'#h3_title").value(title);
+
+
+			$(document).ready(function(){
+				$('#block-menulateral ul.menu').superfish({
+					animation: {height:'show'},
+					delay:		 1200		
+				});
+			});
 		}
 	};
 
