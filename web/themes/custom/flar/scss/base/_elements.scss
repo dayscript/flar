@@ -69,6 +69,7 @@ h3, h4, h5, h6 {
 // select {}
 
 //SLIDER
+.block-views-block-paises-slider-block {
     .owl-wrapper-outer{
         z-index: 1;
         position: relative;
@@ -83,6 +84,7 @@ h3, h4, h5, h6 {
         display: inline-block;
         width: 100%;
         z-index: 2;
+        height: 0;
         .owl-next {
             float: right;
             text-indent: -10000px;
@@ -90,7 +92,7 @@ h3, h4, h5, h6 {
             &:after{
                 position: absolute;
                 background-image: url(../images/right.svg);
-                right: 1rem;
+                right: 0;
                 top: 0;
                 content: "";
                 width: 40px;
@@ -107,7 +109,7 @@ h3, h4, h5, h6 {
             &:after{
                 position: absolute;
                 background-image: url(../images/left.svg);
-                left: 1rem;
+                left: 0;
                 top: 0;
                 content: "";
                 width: 40px;
@@ -121,7 +123,11 @@ h3, h4, h5, h6 {
     .owl-theme .owl-controls .owl-buttons div {
         padding: 0;
         background: none;
+        width: 40px;
+        height: 40px;
+        transform: translateY(-50%);
     }
+}
 
 
 .mb-4{

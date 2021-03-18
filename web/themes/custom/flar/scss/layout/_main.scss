@@ -23,30 +23,16 @@ section#block-views-block-alianzas-block-1{
             margin: 1rem auto;
         }
     }
-    .owl-controls {
-        margin-top: 52px;
-        text-align: center;
-    }
-    .owl-wrapper-outer {
+    .owl-carousel {
         width: 70%;
         float: right;
-        margin-top: 5rem;
-        margin-bottom: 2rem;
-        .owl-wrapper{
-            width: 100% !important;
-        }
-        
-    }
-    .owl-carousel .owl-item {
-        float: left;
-        display: inline-block;
-        width: 270px !important;
-    } 
-    @media (max-width: 600px){
-        .owl-wrapper-outer {
+        .owl-controls {
+            margin-top: 52px;
+            text-align: center;
+        } 
+        @media (max-width: 600px){
             width: 100%;
-            float: initial;
-            margin-top: 0rem;
+            float: none;
         }
     }
     
@@ -70,7 +56,7 @@ section#block-bloghome {
     }
     .container-news-img {
         position: relative;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
         .tipo{
             position: absolute;
             bottom: 0px;
@@ -357,7 +343,7 @@ section#block-socialmedialinks-2{
 }
 
 #block-views-block-frontpage-block-1-2, #block-views-block-frontpage-block-2, #block-views-block-frontpage-block-3, #block-views-block-frontpage-block-4{
-    min-height: 400px !important;
+    min-height: 260px !important;
 } 
 
 .block-socialmedialinks{
